@@ -16,7 +16,7 @@ class Sandbox extends StatelessWidget {
         backgroundColor: Colors.grey,
       ),
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
@@ -33,7 +33,6 @@ class Sandbox extends StatelessWidget {
             height: 300,
             color: Colors.blue,
             child: const Text('Three'),
-            // jfhguasjvfaoifkvjefed
           ),
         ],
       ),
