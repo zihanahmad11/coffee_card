@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'My Coffee ID',
+          'My Coffee Card',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
