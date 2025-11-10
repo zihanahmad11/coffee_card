@@ -11,6 +11,10 @@ class CoffeePrefs extends StatelessWidget {
     print("inc sugars by 1");
   }
 
+  void increaseMilk() {
+    print("inc milk by 1");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -60,6 +64,29 @@ class CoffeePrefs extends StatelessWidget {
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.brown,
               ),
+              child: Text(
+                "+",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text("Milk Ounces:"),
+            Text("4"),
+            Image.asset(
+              "assets/img/sugar_cube.png",
+              width: 25,
+              color: Colors.brown[100],
+              colorBlendMode: BlendMode.multiply,
+            ),
+            Expanded(child: SizedBox()),
+            ElevatedButton(
+              onPressed: increaseMilk,
               child: Text(
                 "+",
                 style: TextStyle(
