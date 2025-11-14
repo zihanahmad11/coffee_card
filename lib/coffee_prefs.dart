@@ -35,14 +35,16 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            Text('Strength: '),
-            Text('$strength'),
-            Image.asset(
-              "assets/img/coffee_bean.png",
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
+            const Text('Strength:       '),
+            // Text('$strength'),
+            // not gonna use this anymore
+            for (var i = 0; i < strength; i++)
+              Image.asset(
+                "assets/img/coffee_bean.png",
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+              ),
             Expanded(child: SizedBox()),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -63,14 +65,17 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            Text("Sugars:    "),
-            Text("$sugar"),
-            Image.asset(
-              "assets/img/sugar_cube.png",
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
+            Text("Sugars:         "),
+
+            // Text("$sugar"),
+            if (sugar == 0) Text("No Sugars"),
+            for (var i = 0; i < sugar; i++)
+              Image.asset(
+                "assets/img/sugar_cube.png",
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+              ),
             Expanded(child: SizedBox()),
             ElevatedButton(
               onPressed: increaseSugars,
@@ -91,13 +96,15 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             Text("Milk Ounces:"),
-            Text("$milk"),
-            Image.asset(
-              "assets/img/sugar_cube.png",
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
+            // Text("$milk"),
+            if (milk == 0) Text("No Milk"),
+            for (var i = 0; i < milk; i++)
+              Image.asset(
+                "assets/img/sugar_cube.png",
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+              ),
             Expanded(child: SizedBox()),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
