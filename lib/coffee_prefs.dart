@@ -1,3 +1,4 @@
+import 'package:coffee_card/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
 class CoffeePrefs extends StatefulWidget {
@@ -35,7 +36,14 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const Text('Strength:'),
+            StyledBodyText2("Strength"),
+            Text(
+              ":",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
             // Text('$strength'),
             // not gonna use this anymore
             for (var i = 0; i < strength; i++)
@@ -65,7 +73,14 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            Text("Sugars:"),
+            StyledBodyText2("Sugars  "),
+            Text(
+              ":",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
 
             // Text("$sugar"),
             if (sugar == 0) Text("No Sugars"),
@@ -81,7 +96,12 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
               onPressed: increaseSugars,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.brown[200],
-                foregroundColor: Colors.brown,
+                foregroundColor: const Color.fromARGB(
+                  255,
+                  51,
+                  29,
+                  2,
+                ),
               ),
               child: Text(
                 "+",
@@ -95,7 +115,14 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            Text("Milk Ounces:"),
+            StyledBodyText2("Milk       "),
+            Text(
+              ":",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
             // Text("$milk"),
             if (milk == 0) Text("No Milk"),
             for (var i = 0; i < milk; i++)
@@ -126,4 +153,3 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
     );
   }
 }
-// dhkufhurzfi
