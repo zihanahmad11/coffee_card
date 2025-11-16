@@ -35,7 +35,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const Text('Strength:       '),
+            const Text('Strength:'),
             // Text('$strength'),
             // not gonna use this anymore
             for (var i = 0; i < strength; i++)
@@ -65,7 +65,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            Text("Sugars:         "),
+            Text("Sugars:"),
 
             // Text("$sugar"),
             if (sugar == 0) Text("No Sugars"),
