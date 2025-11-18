@@ -37,7 +37,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            StyledBodyText2("Strength"),
+            StyledBodyText("Strength", fontSize: 14),
             Text(
               ":",
               style: TextStyle(
@@ -70,7 +70,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            StyledBodyText2("Sugars  "),
+            StyledBodyText("Sugars  ", fontSize: 14),
             Text(
               ":",
               style: TextStyle(
@@ -103,7 +103,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            StyledBodyText2("Milk       "),
+            StyledBodyText("Milk       ", fontSize: 14),
             Text(
               ":",
               style: TextStyle(
