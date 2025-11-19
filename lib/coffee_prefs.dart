@@ -49,7 +49,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
             // not gonna use this anymore
             for (var i = 0; i < strength; i++)
               Image.asset(
-                "assets/img/coffee_bean.png",
+                "assets/img/coffee_bean_pixel.png",
                 width: 25,
                 color: Colors.brown[100],
                 colorBlendMode: BlendMode.multiply,
@@ -83,7 +83,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
             if (sugar == 0) Text("No Sugars"),
             for (var i = 0; i < sugar; i++)
               Image.asset(
-                "assets/img/sugar_cube.png",
+                "assets/img/sugar_cube_pixel.png",
                 width: 25,
                 color: Colors.brown[100],
                 colorBlendMode: BlendMode.multiply,
@@ -115,7 +115,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
             if (milk == 0) Text("No Milk"),
             for (var i = 0; i < milk; i++)
               Image.asset(
-                "assets/img/sugar_cube.png",
+                "assets/img/milk.png",
                 width: 25,
                 color: Colors.brown[100],
                 colorBlendMode: BlendMode.multiply,

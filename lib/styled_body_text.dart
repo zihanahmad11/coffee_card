@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class StyledBodyText extends StatelessWidget {
-  const StyledBodyText(this.text, {super.key, this.fontSize = 18});
+  const StyledBodyText(
+    this.text, {
+    super.key,
+    this.fontSize = 18,
+  });
   final String text;
   final double fontSize;
 
@@ -17,5 +21,3 @@ class StyledBodyText extends StatelessWidget {
     );
   }
 }
-
-

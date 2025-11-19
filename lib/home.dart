@@ -19,27 +19,31 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.brown[500],
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Stack(
         children: [
-          Container(
-            color: Colors.brown[200],
-            padding: const EdgeInsets.all(20),
-            child: StyledBodyText(
-              "How I like my coffee....",
-            ),
-          ),
-          Container(
-            color: Colors.brown[100],
-            padding: const EdgeInsets.all(20),
-            child: const CoffeePrefs(),
-          ),
-          Expanded(
+          Positioned.fill(
             child: Image.asset(
               "assets/img/coffee_bg.jpg",
-              fit: BoxFit.fitWidth,
-              alignment: AlignmentGeometry.bottomCenter,
+              fit: BoxFit.cover,
+              alignment: Alignment.bottomCenter,
             ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                color: Colors.brown[200]!.withOpacity(0.7),
+                padding: const EdgeInsets.all(20),
+                child: StyledBodyText(
+                  "How I like my coffee....",
+                ),
+              ),
+              Container(
+                color: Colors.brown[100]!.withOpacity(0.7),
+                padding: const EdgeInsets.all(20),
+                child: const CoffeePrefs(),
+              ),
+            ],
           ),
         ],
       ),
